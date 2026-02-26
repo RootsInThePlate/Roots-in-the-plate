@@ -1506,14 +1506,14 @@
           return initBook(retry + 1);
         } else {
           document.getElementById('customLoader').classList.add('hidden');
-          alert(`Error loading the book.\n\nPlease ensure book.pdf file exists.`);
+          alert(`Error loading the book.\n\nPlease ensure bookE.pdf file exists.`);
         }
       }
     }
 
     async function loadPDFDocument() {
       const loadingTask = pdfjsLib.getDocument({
-        url: 'book.pdf',
+        url: 'bookE.pdf',
         cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/cmaps/',
         cMapPacked: true
       });
@@ -1645,7 +1645,7 @@
 
     function downloadPDF() {
       const link = document.createElement('a');
-      link.href = 'book.pdf';
+      link.href = 'bookE.pdf';
       link.download = 'Roots_in_the_Plate.pdf';
       link.click();
     }
